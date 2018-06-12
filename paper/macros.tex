@@ -1,0 +1,141 @@
+\def\sosrule#1#2{\frac{\,\,\,\,#1\,\,\,\,}{\,\,\,\,#2\,\,\,\,}}
+\newcommand{\AND}{\mbox{$\;\;\wedge\;\;$}}
+\newcommand{\false}{\mbox{ff}}
+\newcommand{\true}{\mbox{tt}}
+\def\Prob#1#2#3{{\calP}_{#1 #2}(#3)}
+\def\rU#1{\, {\calU}^{#1} \,}
+\def\FlyFast#1{{\sf FlyFast#1}}
+\newcommand{\SET}[1]{\{#1\}}  
+\newcommand{\aN}{^{(N)}}
+
+\def\calA{{\cal A}}
+%\def\calB{{\cal B}}
+%\def\calC{{\cal C}}
+%\def\calD{{\cal D}}
+\def\calE{{\cal E}}
+%\def\calF{{\cal F}}
+%\def\calG{{\cal G}}
+%\def\calH{{\cal H}}
+\def\calI{{\cal I}}
+%\def\calJ{{\cal J}}
+%\def\calK{{\cal K}}
+%\def\calL{{\cal L}}
+\def\calM{{\cal M}}
+%\def\calN{{\cal N}}
+\def\calO{{\cal O}}
+\def\calP{{\cal P}}
+%\def\calQ{{\cal Q}}
+%\def\calR{{\cal R}}
+\def\calS{{\cal S}}
+%\def\calT{{\cal T}}
+\def\calU{{\cal U}}
+\def\calV{{\cal V}}
+%\def\calW{{\cal W}}
+\def\calX{{\cal X}}
+%\def\calY{{\cal Y}}
+%\def\calZ{{\cal Z}}
+\newcommand{\tuple}[1]{{\langle #1 \rangle}}
+%\newcommand{\at}{\mbox{\sl at}}
+\newcommand{\at}{\mathsf{at}}
+\def\act#1{{\calA}_{#1}} 	
+\def\dfas{:=}			
+\def\dirac{\boldsymbol{\delta}}
+\def\frc{\textsf{frc}\,}
+\def\lnxt{\calX \,}			
+\def\otm{\mathbf{K}}				
+\def\os{\Delta}			
+\def\semint#1#2{#1[\![#2]\!]}
+\def\sep{|}				
+\def\sc#1{\calS_{#1}}		
+\def\v{\calV}			
+\def\my{\mathbf{my}}	
+\def\sls{\mathscr{P}}			
+\def\sdtm{\mathbf{P}}	
+\def\us#1{\calU^#1}
+\def\vct#1{{\mathbf #1}}
+%\def\vt#1{\vec{#1}}
+\def\vt#1{#1}
+\def\loc{\mathsf{loc}}
+\def\df{\mathsf{def}}
+\def\rdmloc{\mathsf{randomLoc}}
+\def\H{\mathsf{H}}
+\def\N{\mathsf{N}}
+\def\S{\mathsf{S}}
+\def\E{\mathsf{E}}
+\def\W{\mathsf{W}}
+\def\rest{\mathbf{rest}}
+\def\cond{\mathsf{cond}}
+\def\synsum{\mathsf{SUM}}
+\def\synor{\mathsf{OR}}
+\def\carma{\textsc{Carma}}
+
+
+%
+% real numbers, etc
+%
+%\newcommand{\nats}{\mathbb{N}}
+\newcommand{\nats}{\mathrm{I\!N}}
+%\newcommand{\reals}{\mathbb{R}}
+\newcommand{\reals}{\mathrm{I\!R}}
+\newcommand{\nnreals}{\reals_{\geq 0}}
+\newcommand\R{\reals}
+\newcommand{\pnats}{\nats_{> 0}}
+
+%
+% for transformational proofs,  definitions, propositions, lemmas, theorems
+\def\deriv{\noindent\hspace*{.20in}\vspace{0.1in}}
+\def\alig{\noindent\hspace*{.20in}\vspace{0.1in}}
+%\def\contnl{\\\mbox{\hspace{0.2in}}}
+\def\contnlh{\\$ $\mbox{\hspace{0.4in}}}
+\def\contnl{\\$ $\mbox{\hspace{0.2in}}}
+\def\halig{\noindent\hspace*{.41in}\vspace{0.1in}}
+\def\hint#1#2{\newline#1\hspace*{.25in}\{$#2$\}\vspace{0.1in}\newline\hspace*{.20in}\vspace{0.1in}}
+\def\together{\\\vspace{-0.5in}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newproof{proof}{Proof}
+
+% colors
+\def\BLACK#1{\textcolor{black}{#1}}
+\def\BLUE#1{\textcolor{blue}{#1}}
+\def\BROWN#1{\textcolor{brown}{#1}}
+\def\CYAN#1{\textcolor{cyan}{#1}}
+\def\GRAY#1{\textcolor{lightgray}{#1}}
+\def\GREEN#1{\textcolor{green}{#1}}
+\def\MAGENTA#1{\textcolor{magenta}{#1}}
+\def\RED#1{\textcolor{red}{#1}}
+\def\WHITE#1{\textcolor{white}{#1}}
+\def\YELLOW#1{\textcolor{yellow}{#1}}
+\def\VIOLET#1{\textcolor{violet}{#1}}
+
+\newcommand{\vr}[1]{\mathbf{#1}}
+%\newcommand{\n}[1]{\overline{#1}}
+\newcommand{\n}[1]{m_{\mathit{#1}}}
+
+\newcommand\MN{M^{(N)}}
+\newcommand\esp[1]{{\mathchoice{\besp{#1}}{\sesp{#1}}{\sesp{#1}}{\sesp{#1}}}}
+\newcommand\besp[1]{\mathbb{E}\left[#1\right]}
+\newcommand\sesp[1]{\mathbb{E}[#1]}
+\newcommand\espN[1]{{\mathchoice{\bespN{#1}}{\sespN{#1}}{\sespN{#1}}{\sespN{#1}}}}
+\newcommand\bespN[1]{\mathbf{E}^{(N)}\left[#1\right]}
+\newcommand\sespN[1]{\mathbf{E}^{(N)}[#1]}
+\newcommand\Proba[1]{{\mathchoice{\bProba{#1}}{\sProba{#1}}{\sProba{#1}}{\sProba{#1}}}} 
+\newcommand\bProba[1]{\mathbf{P}\left[#1\right]}
+\newcommand\sProba[1]{\mathbf{P}[#1]}
+\newcommand\norm[1]{{\mathchoice{\bnorm{#1}}{\snorm{#1}}{\snorm{#1}}{\snorm{#1}}}}
+\newcommand\bnorm[1]{\left\|#1\right\|}
+\newcommand\snorm[1]{\|#1\|}
+\newcommand\norminf[1]{\left\|#1\right\|_{\infty}}
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\Ind[1]{\mathbf{1}_{\{#1\}}}
+\newcommand\F{\mathcal{F}}
+\newcommand\dt{\frac{d}{dt}}
+\newcommand\pder[1]{\frac{\partial }{\partial#1}}
+\newcommand\p[1]{\left(#1\right)}
+\newcommand\cov[1]{\mathrm{cov}\left(#1\right)}
+\newcommand\var[1]{\mathrm{var}\left(#1\right)}
+
+\newtheorem{coro}{Corollary}
