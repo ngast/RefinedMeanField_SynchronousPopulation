@@ -22,5 +22,5 @@ numpy, matplotlib and jupyter) is needed. Then, each notebook
 and WSN_model.ipynb) can be run independently using Jupyter.
 
 [MAMA]: https://github.com/ngast/RefinedMeanField_SynchronousPopulation/raw/master/extendedAbstractMAMA2018/GaLaMa_2018.pdf
-[PAPER]: https://github.com/ngast/RefinedMeanField_SynchronousPopulation/raw/master/slides/Gast_MAMA2018.pdf
-[SLIDES]: https://github.com/ngast/RefinedMeanField_SynchronousPopulation/raw/master/paper/GaLaMa17.pdf 
+[PAPER]: https://github.com/ngast/RefinedMeanField_SynchronousPopulation/raw/master/paper/GaLaMa17.pdf 
+[SLIDES]: https://github.com/ngast/RefinedMeanField_SynchronousPopulation/raw/master/slides/Gast_MAMA2018.pdf
