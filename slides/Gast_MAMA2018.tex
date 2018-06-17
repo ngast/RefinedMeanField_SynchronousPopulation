@@ -256,14 +256,14 @@
     change state at each time step. {\small(see talk at
       SIGMETRICS)}
     \begin{itemize}
-    \item Continuous-time mean field approximation
+    \item \red{Continuous-time} mean field approximation
     \end{itemize}
     \bigskip
     
   \item \blue{Synchronous case} (LB+07) -- All object simultaneously
     change state {\small (\blue{this talk})}.
     \begin{itemize}
-    \item Discrete-time mean field approximation
+    \item \red{Discrete-time} mean field approximation
     \end{itemize}
   \end{itemize}
 
@@ -399,16 +399,16 @@
   Hence :
   \begin{align*}
     \esp{X(t+1)} &= \esp{X(t) K(X(t))}
-                   \uncover<2->{\blue{\approx\esp{X(t)} K(\esp{X(t)})}%
+                   \uncover<2->{\blue{\text{\only<3>{\sout}{$\approx\esp{X(t)} K(\esp{X(t)})$}}}%
                    &\blue{\text{Mean field approx.}}}
-  \end{align*} \pause 
+  \end{align*} \pause \pause
   
   Now, in addition :
   \begin{align*}
     \mathrm{cov}(X(t),X(t) \mid X(t)=\mu(t)) &\blue{=
                                                \frac1N\Gamma(\mu(t))}. 
   \end{align*}
-  The refined mean field arises when the $1/N$-term is taken into
+  The refined mean field is derived by taking the $1/N$-term into
   account.
 \end{frame}
 
@@ -426,20 +426,28 @@
 \end{frame}
 
 \begin{frame}{Limit of the approach on an example}
-  \begin{tabular}{ccc}
-    \mpage{.4}{
-    \begin{tikzpicture}
-      \tikzstyle{state}=[circle,draw]
-      \node[state] at (0,0) (0) {0};
-      \node[state] at (3,0) (1) {1};
-      \draw (0) edge[bend left,->] node[above] {$\alpha m_0$} (1);
-      \draw (1) edge[bend left,->] node[above] {$1$} (0);
-    \end{tikzpicture}
-    }
-    &\mpage{.3}{
-      \includegraphics[width=\linewidth]{phi_unstable}
-      }
-  \end{tabular}
+  \begin{columns}
+    \begin{column}{.4\linewidth}
+      \begin{tikzpicture}
+        \tikzstyle{state}=[circle,draw]
+        \node[state] at (0,0) (0) {0};
+        \node[state] at (3,0) (1) {1};
+        \draw (0) edge[bend left,->] node[above] {$\alpha x_0$} (1);
+        \draw (1) edge[bend left,->] node[above] {$1$} (0);
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.4\linewidth}
+      \centering
+      \includegraphics[width=.8\linewidth]{phi_unstable}
+      \vspace{-1cm}
+      
+      \begin{align*}
+        \Phi_1(x_0) &= 1-\alpha (x_0)^2
+      \end{align*}
+
+      PROBLEM? 
+    \end{column}
+  \end{columns}
   \bigskip\bigskip
   
   \begin{itemize}
