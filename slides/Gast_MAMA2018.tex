@@ -375,19 +375,31 @@
     $\esp{X}= \pi + \frac1N\p{\lim_{t\to\infty}V(t)} + o(1/N)$.
   \end{theorem}
 
-  \begin{center}
-    \mpage{.9}{%
-      \begin{tikzpicture}
-        \node at
-        (0,0){%
-          \only<1-2>{\includegraphics[width=.7\linewidth]{SEIR_all_N10}}%
-          \only<3->{\includegraphics[width=.7\linewidth]{SEIR_all_N20}}};
-        \only<1-2>{\node at (5.5,1.5){Refined m.f. $\mu(t)+\frac{V_t}{10}$};}
-        \only<3>{\node at (5.5,0.5){Refined m.f. $\mu(t)+\frac{V_t}{20}$};}
-        \node at (5,-.5){Mean field $\mu(t)$};
-      \end{tikzpicture}
+  \only<1-3>{
+    \begin{center}
+      \mpage{.9}{%
+        \begin{tikzpicture}
+          \node at
+          (0,0){%
+            \only<1-2>{\includegraphics[width=.7\linewidth]{SEIR_all_N10}}%
+            \only<3->{\includegraphics[width=.7\linewidth]{SEIR_all_N20}}};
+          \only<1-2>{\node at (5.5,1.5){Refined m.f. $\mu(t)+\frac{V_t}{10}$};}
+          \only<3>{\node at (5.5,0.5){Refined m.f. $\mu(t)+\frac{V_t}{20}$};}
+          \node at (5,-.5){Mean field $\mu(t)$};
+        \end{tikzpicture}
+      }
+    \end{center}
+  }
+  \only<4>{
+    \blue{Result for steady-state:}
+    
+    \begin{tabular}{@{}|c|ccccc|c|}
+      \hline
+      &$N$&$10$&$20$&$30$&$50$&$\infty$ (mf)\\\hline
+      $\esp{X_S}$ (Simulation)&0.191 & 0.177 & 0.175 & 0.169 & 0.166 & --\\
+      $\mu_S(\infty)+\frac{V}{N}$ (Refined mf)&0.189 & 0.176 & 0.172 & 0.169 & 0.167 & 0.164\\\hline
+    \end{tabular}
     }
-  \end{center}
 \end{frame}
 
 \begin{frame}{Where does the $O(1/N)$-term come from?}
@@ -444,8 +456,6 @@
       \begin{align*}
         \Phi_1(x_0) &= 1-\alpha (x_0)^2
       \end{align*}
-
-      PROBLEM? 
     \end{column}
   \end{columns}
   \bigskip\bigskip
