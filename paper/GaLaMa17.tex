@@ -1,4 +1,4 @@
-\documentclass{elsarticle}
+\documentclass{amsart}
 
 % \usepackage{lineno,
 \usepackage{hyperref}
@@ -20,13 +20,12 @@
 \def\RED#1{\textcolor{red}{#1}}
 \def\BLUE#1{\textcolor{blue}{#1}}
 
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
 \usepackage{graphicx}
 \usepackage{mathrsfs}
 
-\journal{Performance Evaluation}
+%\journal{Performance Evaluation}
 %% `Elsevier LaTeX' style
-\bibliographystyle{elsarticle-num}
 %%%%%%%%%%%%%%%%%%%%%%%
 
 \input{macros}
@@ -34,20 +33,22 @@
 \begin{document}
 
 
-\begin{frontmatter}
+%\begin{frontmatter}
 
-  \title{A Refined Mean Field Approximation of Synchronous
-    Discrete-Time Population Models}
+\title{A Refined Mean Field Approximation of Synchronous Discrete-Time
+  Population Models}
 
-\author[INRIA]{Nicolas Gast\corref{correspondingauthor}}
-\cortext[correspondingauthor]{Corresponding author}
-\ead{nicolas.gast@inria.fr}
+\author{Nicolas Gast (Inria) \and Diego Latella (CNR-ISTI) \and Mieke
+  Massink (CNR-ISTI)}
 
-\author[CNR]{Diego Latella}
-\author[CNR]{Mieke Massink}
+\thanks{This paper and the simulations it
+    contains are fully reproducible~:
+    {\footnotesize\url{https://github.com/ngast/RefinedMeanField_SynchronousPopulation}}.
+  }
+%\address[INRIA]{Inria, Univ. Grenoble Alpes, F-38000 Grenoble, France}
+%\address[CNR]{CNR-ISTI, I-56124 Pisa, Italy}
 
-\address[INRIA]{Inria, Univ. Grenoble Alpes, F-38000 Grenoble, France}
-\address[CNR]{CNR-ISTI, I-56124 Pisa, Italy}
+\maketitle
 
 \begin{abstract}
   Mean field approximation is a popular method to study the behaviour
@@ -71,12 +72,12 @@
   field approximation, especially for relatively small population sizes.
 \end{abstract}
 
-\begin{keyword}
-  Mean field approximation; Discrete time population models; Accuracy
-  of approximation.
-\end{keyword}
+% \begin{keyword}
+%   Mean field approximation; Discrete time population models; Accuracy
+%   of approximation.
+% \end{keyword}
 
-\end{frontmatter}
+%\end{frontmatter}
 
 %\linenumbers
 
@@ -224,9 +225,6 @@ field approximation. When focusing on sample path convergence, the
 refinement of the mean field approximation would be to consider an
 additive term of $1/\sqrt{N}$ times a Gaussian noise as for example in
 \cite{gast2012markov} and not a $1/N$ term as in this paper.
-
-This paper and the simulations it contained are fully reproducible~:
-{\footnotesize\url{https://github.com/ngast/RefinedMeanField_SynchronousPopulation}}.
 
 \paragraph*{Outline} The rest of the paper is organised as follows. In
 Section~\ref{sect:preliminaries}, we introduce the model that we
@@ -1739,7 +1737,9 @@ computed in closed form. We are currently investing means to make this
 computation automatic which will allow us to study large-scale
 examples. 
 
-\section*{References}
+%\section*{References}
+
+\bibliographystyle{plain}%elsarticle-num}
 \bibliography{RefMeanField}
 
 \end{document}
