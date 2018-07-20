@@ -1,0 +1,5 @@
+*.nav
+*.snm
+*.toc
+*.spl
+*.ipynb_checkpoints
